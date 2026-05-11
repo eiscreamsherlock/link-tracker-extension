@@ -13,7 +13,7 @@ for concept art and narrative design research.  Especially for keeping track of 
 This mostly works at this point, but I do *not* recommend installing it.
 
 ---
-### Proceed at your own risk. :grimace:
+### Proceed at your own risk. :grimacing:
 ---
 
 ### Icon Used:
