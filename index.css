@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  /* We need to set border-box other input field will be 100% + 10px + 10px */
+  box-sizing: border-box;
+  border: 1px solid #5f9341;
+}
+
+button {
+  background-color: #5f9341;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-top: 2px;
+  border-radius: 4px;
+}
+
+#clear-btn {
+  background-color: crimson;
+}
+
+#ul-el {
+  color: #5f9341;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  color: #5f9341;
+  margin-top: 5px;
+}
+
+/* This only applies to anchor tags INSIDE of list elements  */
+/* (Which is what we want here. */
+li a {
+  color: #5f9341;
+}
