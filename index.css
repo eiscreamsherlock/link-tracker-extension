@@ -3,6 +3,7 @@ body {
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
   min-width: 400px;
+  font-size: 18;
 }
 
 input {
@@ -20,11 +21,14 @@ button {
   padding: 10px 20px;
   font-weight: bold;
   margin-top: 2px;
+  border: 1px solid #5f9341;
   border-radius: 4px;
 }
 
 #clear-btn {
-  background-color: crimson;
+  background-color: white;
+  color: #5f9341;
+  /* border: 1px solid #5f9341; */
 }
 
 #ul-el {
