@@ -10,12 +10,11 @@ This time we're making a little Chrome Extension to "enable our sales folks to t
 I'm almost definitely not going to be tracking any "sales leads" with this, but it could be useful
 for concept art and narrative design research.  Especially for keeping track of crediting URLs.
 
-This mostly works at this point, but I do *not* recommend installing it.
+It mostly works at this point, but I do **not** recommend installing it.
 
 ---
-### Proceed at your own risk. :grimacing:
+### _Proceed at your own risk._ :grimacing:
 ---
 
-### Icon Used:
-<a href="https://www.flaticon.com/free-icons/list" title="list icons">List icons created by Freepik
-- Flaticon</a>
+Icon Used:
+[List icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/list)
