@@ -2,18 +2,18 @@ let myLeads = [];
 const inputEl = document.querySelector("#input-el");
 const inputBtn = document.querySelector("#input-btn");
 const clearBtn = document.querySelector("#clear-btn");
+const tabBtn = document.querySelector("#tab-btn");
 const ulEl = document.querySelector("#ul-el");
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if(leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
-  renderLeads(myLeads);
+  render(myLeads);
 }
 
-function renderLeads(leads) {
+function render(leads) {
   let listItems = "";
-  // renderList = JSON.parse(localStorage.getItem(`${leads}`));
   for (let i = 0; i < leads.length; i++) {
     thisItem = leads[i];
     listItems += `
@@ -31,12 +31,10 @@ inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value);
     inputEl.value = '';
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
-    renderLeads(myLeads);
+    render(myLeads);
   }
 });
 
-// Can't be bothered to do a bunch of mouse clicking during testing like some kind of windows
-// user...
 inputEl.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -44,10 +42,18 @@ inputEl.addEventListener("keypress", function(event) {
   }
 });
 
+tabBtn.addEventListener("click", function() {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+  });
+});
+
 clearBtn.addEventListener("dblclick", function() {
   if (localStorage.getItem("myLeads")) {
     localStorage.clear();
     myLeads = [];
-    renderLeads(myLeads);
+    render(myLeads);
   }
 });
